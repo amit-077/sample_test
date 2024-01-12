@@ -7,7 +7,7 @@ app.use(express.json());
 
 app.post("/getData", (req, res) => {
   console.log(req.body);
-  const { data } = req.body.data;
+  const data = req.body.data;
   if (!data) {
     res.status(400).send();
   }
